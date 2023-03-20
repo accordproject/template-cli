@@ -1,22 +1,30 @@
 #!/usr/bin/env node
-const { Command } = require("commander");
 const figlet = require("figlet");
-import { generateCommand } from "./ten-generate";
-
-const program = new Command();
-
+import { Argument, program } from '@commander-js/extra-typings';
+import { generateCommandHandler } from './ten-generate';
 console.log(figlet.textSync("Template Manager"));
 
 program
     .version('1.0.0')
     .name('ten')
-    .command('generate <templateFile> <modelFile> <dataJson> <outputFormat> <outputDir>')
+    .command('generate')
     .alias('gen')
     .description('Generate a document from a template')
-    .action(generateCommand);
+    .argument('<templateDir>', 'path to template directory')
+    .argument('<dataFile>', 'path to JSON data file')
+    .addArgument(new Argument('<outputFormat>', 'output file format').choices(['pdf', 'markdown', 'html']))
+    .argument('<outputFile>', 'path to output file')
+    .option('--libraryFile [value]', 'path to library file')
+    .option('--now [value]', 'date/time to use for \'now\' (ISO-8601 format)')
+    .option('--verbose', 'verbose output')
+    .action(generateCommandHandler);
 
-if (!process.argv.slice(2).length) {
-    program.outputHelp();
+async function run() {
+    await program.parseAsync();
+
+    if (!process.argv.slice(2).length) {
+        program.outputHelp();
+    }    
 }
 
-program.parseAsync(process.argv);
+run();
