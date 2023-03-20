@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const { Command } = require("commander");
 const figlet = require("figlet");
 import { generateCommand } from "./ten-generate";
