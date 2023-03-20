@@ -1,11 +1,11 @@
 {
   "name": "@accordproject/template-cli",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Command Line Interface for template engine and data format conversion",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-      "dist"
+    "dist"
   ],
   "bin": {
     "ten": "./dist/index.js"
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.15.3",
-    "typescript": "^5.0.2",
-    "rimraf": "3.0.2"
+    "rimraf": "3.0.2",
+    "typescript": "^5.0.2"
   }
 }
