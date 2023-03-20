@@ -1,7 +1,7 @@
 {
-  "name": "template-cli",
+  "name": "@accordproject/template-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "Command Line Interface for template engine and data format conversion",
   "main": "dist/index.js",
   "bin": {
     "dirmanager": "./dist/index.js"
@@ -15,8 +15,8 @@
     "url": "git+https://github.com/accordproject/template-cli.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Accord Project",
+  "license": "Apache-2",
   "bugs": {
     "url": "https://github.com/accordproject/template-cli/issues"
   },
