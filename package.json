@@ -1,6 +1,6 @@
 {
   "name": "@accordproject/template-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Command Line Interface for template engine and data format conversion",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
