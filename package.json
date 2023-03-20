@@ -22,7 +22,12 @@
   },
   "homepage": "https://github.com/accordproject/template-cli#readme",
   "dependencies": {
+    "@accordproject/concerto-core": "^3.7.0",
+    "@accordproject/markdown-template": "^0.16.6-20230317163634",
+    "@accordproject/markdown-transform": "^0.16.6-20230317163634",
+    "@accordproject/template-engine": "^1.0.6",
     "commander": "^10.0.0",
+    "dayjs": "^1.11.7",
     "figlet": "^1.5.2"
   },
   "devDependencies": {
