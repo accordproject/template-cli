@@ -1,6 +1,6 @@
 # Accord Project Template Manager
 
-Command Line Interface for Accord Project Template Engine.
+Command Line Interface for the [Accord Project Template Engine](https://github.com/accordproject/template-engine).
 
 
 ## Install
